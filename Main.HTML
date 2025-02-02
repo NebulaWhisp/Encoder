@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlDoc">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encoder</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Letter to Number Encoder</h1>
+        <p id="modeDescription">Convert letters to numbers (A=1, B=2, ..., Z=26)</p>
+        
+        <div class="input-group">
+            <input type="text" 
+                   id="textInput" 
+                   placeholder="Type your message here..." 
+                   value="The quick brown fox jumps over the lazy dog"
+                   autocomplete="off"
+                   oninput="convertText()" />
+        </div>
+        
+        <div class="button-group">
+            <button onclick="clearInput()">Clear</button>
+            <button onclick="toggleMode()" id="modeToggle">Switch Mode</button>
+            <button id="copyButton" onclick="copyResult(this)">Copy Result</button>
+            <button onclick="toggleTheme()" id="themeToggle">Toggle Theme</button>
+        </div>
+
+        <div id="output" class="result">Result will appear here...</div>
+    </div>
+
+    <div class="footer">
+        by Faseeh Haider
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

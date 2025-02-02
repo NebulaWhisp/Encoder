@@ -1,0 +1,161 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+        135deg, 
+        #6e8efb, 
+        #a777e3, 
+        #ff9a9e, 
+        #67b26f, 
+        #4ca2cd
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease-in-out infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body.dark-theme {
+    background: linear-gradient(
+        135deg,
+        #1a2f4b,
+        #2d3436,
+        #1e4d40,
+        #2c1810,
+        #2b1b41
+    );
+    background-size: 400% 400%;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1 {
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: white;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+button {
+    background: rgba(110, 142, 251, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+button:hover {
+    background: rgba(110, 142, 251, 0.4);
+}
+
+#output {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-height: 50px;
+    word-wrap: break-word;
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    font-size: 1.1rem;
+}
+
+.footer {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+}
+
+.copied {
+    background: rgba(103, 178, 111, 0.4) !important;
+}
+
+body .protected-footer {
+    display: block !important;}
+
+    .protected-footer {
+        position: fixed !important;
+        bottom: 20px !important;
+        left: 20px !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-size: 0.9rem !important;
+        z-index: 9999 !important;
+        user-select: none !important;
+        pointer-events: none !important;
+        -webkit-user-select: none !important;
+        -moz-user-select: none !important;
+        -ms-user-select: none !important;
+    }
+    
+    .protected-footer {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    body .protected-footer {
+        display: block !important;
+    }
